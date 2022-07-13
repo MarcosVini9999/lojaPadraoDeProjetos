@@ -1,14 +1,13 @@
 package classVender;
 
 public final class desconto extends vender{
+	
 	protected double precoDesconto;
 	private static desconto instanciaDesconto;
-	
-	
-   //this.precoDesconto = this.quantidade*this.valorUnidade - this.valorDesconto;
-	public double aplicarDesconto() {
-		setPrecoDesconto(this.quantidade*this.valorUnidade - this.valorDesconto);
-		return getPrecoDesconto();
+
+	public double aplicarDesconto(int qntd,double valor,double desconto) {
+		precoDesconto = qntd*valor - desconto;
+		return precoDesconto;
 	}
 	public static desconto getInstancia() {
 		if (instanciaDesconto == null) {
