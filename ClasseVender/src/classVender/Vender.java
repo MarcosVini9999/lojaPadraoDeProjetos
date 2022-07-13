@@ -1,7 +1,7 @@
 package classVender;
 
 
-public class vender {
+public class Vender {
 	
 	private int Id_produto;
 	private String nomeProduto;
@@ -51,10 +51,10 @@ public class vender {
 				   //setQuantidade(quantidade);
 				   TipoProduto tipo = TipoProduto.valueOf(typeProduct);
 				   Strategy strategy = tipo.conseguirDesconto();
-				   desconto d1 = desconto.getInstancia(); 
+				   Desconto d1 = Desconto.getInstancia(); 
 				   
-				   notas n = new cupomFiscalAdapter(new cupomFiscal());
-				   notas n1 = new notaFiscalEletronicaAdapter(new notaFiscalEletronica());
+				   Notas n = new CupomFiscalAdapter(new CupomFiscal());
+				   Notas n1 = new NotaFiscalEletronicaAdapter(new NotaFiscalEletronica());
 				   
 				   setValorDesconto( tipo.conseguirDesconto().calcularDesconto(valorUnidade*quantidade));
 				   
@@ -63,12 +63,12 @@ public class vender {
 				   n1.emitirNotas(nomeCliente, cpf, nomeLoja, cnpj, quantidade, valorUnidade);
 				   System.out.println("\nPreco de Atacado : "+d1.aplicarDesconto(quantidade, valorUnidade, getValorDesconto()));
 		      } else {
-			        notas n = new cupomFiscalAdapter(new cupomFiscal());
-			        notas n1 = new notaFiscalEletronicaAdapter(new notaFiscalEletronica());
+			        Notas n = new CupomFiscalAdapter(new CupomFiscal());
+			        Notas n1 = new NotaFiscalEletronicaAdapter(new NotaFiscalEletronica());
 				    n.emitirNotas(getNomeCliente(), getCpf(), getNomeLoja(), getCnpj(), quantidade, valorUnidade);
 				    System.out.println();
 				    n1.emitirNotas(nomeCliente, cpf, nomeLoja, cnpj, quantidade, valorUnidade);
-		    	    System.out.println("\nPreço de Varejo : "+getQuantidade()*getValorUnidade());
+		    	    System.out.println("\nPreï¿½o de Varejo : "+getQuantidade()*getValorUnidade());
 		      }
 		   } else {
 

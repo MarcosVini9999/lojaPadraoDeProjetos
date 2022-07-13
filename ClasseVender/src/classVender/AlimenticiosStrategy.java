@@ -1,7 +1,7 @@
 package classVender;
 
 public class AlimenticiosStrategy implements Strategy{
-	 vender v = new vender();
+	 Vender v = new Vender();
 
 	@Override
 	public double calcularDesconto(double valor) {

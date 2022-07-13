@@ -1,6 +1,6 @@
 package classVender;
 
-public class notaFiscalEletronica extends vender{
+public class NotaFiscalEletronica extends Vender{
 	
 	public void emitirNotaFiscalEletronica(String nomeCliente,String nomeLoja,int CNPJ, int quantidadeProduto , double valor ) {
 		System.out.println("Nome do Cliente " + nomeCliente);

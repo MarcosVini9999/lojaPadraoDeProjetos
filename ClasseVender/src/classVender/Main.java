@@ -1,11 +1,10 @@
 package classVender;
 
 
-public class main {
+public class Main {
 	public static void main (String[]args) {
 		
-		desconto d2 = new desconto();
-		vender venda = new vender();
+		Vender venda = new Vender();
 		
         venda.setCpf(45555);
         venda.setCnpj(487511);

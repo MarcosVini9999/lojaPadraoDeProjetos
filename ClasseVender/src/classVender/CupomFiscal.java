@@ -1,6 +1,6 @@
 package classVender;
 
-public class cupomFiscal extends vender {
+public class CupomFiscal extends Vender {
 
 
 	public void emitirCupomFiscal(String nomeLoja,int CNPJ,int qntd,double valor) {

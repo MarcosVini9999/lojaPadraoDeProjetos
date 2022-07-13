@@ -1,9 +1,9 @@
 package classVender;
 
-public class cupomFiscalAdapter implements notas{
+public class CupomFiscalAdapter implements Notas{
 
-	private cupomFiscal cf;
-	public cupomFiscalAdapter(cupomFiscal cf) {
+	private CupomFiscal cf;
+	public CupomFiscalAdapter(CupomFiscal cf) {
 		this.cf = cf;
 	}
 	@Override

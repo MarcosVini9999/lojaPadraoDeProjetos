@@ -1,10 +1,10 @@
 package classVender;
 
-public class notaFiscalEletronicaAdapter implements notas {
+public class NotaFiscalEletronicaAdapter implements Notas {
 	
-      notaFiscalEletronica nfe = new notaFiscalEletronica();
+      NotaFiscalEletronica nfe = new NotaFiscalEletronica();
       
-      public notaFiscalEletronicaAdapter(notaFiscalEletronica nfe) {
+      public NotaFiscalEletronicaAdapter(NotaFiscalEletronica nfe) {
     	  this.nfe = nfe;
       }
       

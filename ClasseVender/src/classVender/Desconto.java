@@ -1,17 +1,17 @@
 package classVender;
 
-public final class desconto extends vender{
+public final class Desconto extends Vender{
 	
 	protected double precoDesconto;
-	private static desconto instanciaDesconto;
+	private static Desconto instanciaDesconto;
 
 	public double aplicarDesconto(int qntd,double valor,double desconto) {
 		precoDesconto = qntd*valor - desconto;
 		return precoDesconto;
 	}
-	public static desconto getInstancia() {
+	public static Desconto getInstancia() {
 		if (instanciaDesconto == null) {
-			instanciaDesconto = new desconto();
+			instanciaDesconto = new Desconto();
 		}
 		return instanciaDesconto;
 	}
