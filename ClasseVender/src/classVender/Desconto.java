@@ -15,11 +15,9 @@ public final class Desconto extends Vender{
 		}
 		return instanciaDesconto;
 	}
-
 	public double getPrecoDesconto() {
 		return precoDesconto;
 	}
-
 	public void setPrecoDesconto(double precoDesconto) {
 		this.precoDesconto = precoDesconto;
 	}

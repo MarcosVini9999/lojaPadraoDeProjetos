@@ -45,12 +45,11 @@ public class Vender {
 		
 	}
 	
-   public void efetivarVenda() {
+	public void efetivarVenda() {
 	   if(verificarDisponibilidadeProduto(quantidade)) {
 		   if (quantidade >= 0.1*quantidadeProduto) {
 				   //setQuantidade(quantidade);
 				   TipoProduto tipo = TipoProduto.valueOf(typeProduct);
-				   Strategy strategy = tipo.conseguirDesconto();
 				   Desconto d1 = Desconto.getInstancia(); 
 				   
 				   Notas n = new CupomFiscalAdapter(new CupomFiscal());
@@ -58,9 +57,13 @@ public class Vender {
 				   
 				   setValorDesconto( tipo.conseguirDesconto().calcularDesconto(valorUnidade*quantidade));
 				   
+				   System.out.println("========");
 				   n.emitirNotas(getNomeCliente(), getCpf(), getNomeLoja(), getCnpj(), quantidade, valorUnidade);
+				   System.out.println("========");
 				   System.out.println();
+				   System.out.println("========");
 				   n1.emitirNotas(nomeCliente, cpf, nomeLoja, cnpj, quantidade, valorUnidade);
+				   System.out.println("========");
 				   System.out.println("\nPreco de Atacado : "+d1.aplicarDesconto(quantidade, valorUnidade, getValorDesconto()));
 		      } else {
 			        Notas n = new CupomFiscalAdapter(new CupomFiscal());
@@ -79,53 +82,53 @@ public class Vender {
 	
 	public int getQuantidadeProduto() {
 	return quantidadeProduto;
-}
+	}
 
 
-public void setQuantidadeProduto(int quantidadeProduto) {
-	this.quantidadeProduto = quantidadeProduto;
-}
-
-
-public String getNomeLoja() {
-	return nomeLoja;
-}
-
-
-public void setNomeLoja(String nomeLoja) {
-	this.nomeLoja = nomeLoja;
-}
-
-
-public int getCnpj() {
-	return cnpj;
-}
-
-
-public void setCnpj(int cnpj) {
-	this.cnpj = cnpj;
-}
-
-
-public String getNomeCliente() {
-	return nomeCliente;
-}
-
-
-public void setNomeCliente(String nomeCliente) {
-	this.nomeCliente = nomeCliente;
-}
-
-
-public int getCpf() {
-	return cpf;
-}
-
-
-public void setCpf(int cpf) {
-	this.cpf = cpf;
-}
-
+	public void setQuantidadeProduto(int quantidadeProduto) {
+		this.quantidadeProduto = quantidadeProduto;
+	}
+	
+	
+	public String getNomeLoja() {
+		return nomeLoja;
+	}
+	
+	
+	public void setNomeLoja(String nomeLoja) {
+		this.nomeLoja = nomeLoja;
+	}
+	
+	
+	public int getCnpj() {
+		return cnpj;
+	}
+	
+	
+	public void setCnpj(int cnpj) {
+		this.cnpj = cnpj;
+	}
+	
+	
+	public String getNomeCliente() {
+		return nomeCliente;
+	}
+	
+	
+	public void setNomeCliente(String nomeCliente) {
+		this.nomeCliente = nomeCliente;
+	}
+	
+	
+	public int getCpf() {
+		return cpf;
+	}
+	
+	
+	public void setCpf(int cpf) {
+		this.cpf = cpf;
+	}
+	
 
 	public int getId_produto() {
 		return Id_produto;
