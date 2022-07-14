@@ -1,6 +1,8 @@
-## Desenvolvedores: Marcos, David e Valerio
+# Atividade de engenharia de software
 
-## Testers: Vinicius Costa e Vitor Hugo
+### Este trabalho tem como finalidade aplicar padrões de projetos de programação, assim como criar uma suíte de testes, em uma das funcionalidades apresentadas nos diagramas abaixo
+
+# Diagramas do projeto loja
 
 [![Diagrama_de_casos_de_Uso](https://i.pinimg.com/originals/75/48/0a/75480a5235382f9c9bc5de847bb8bd1a.jpg)]()
 [![Diagrama_de_classes](https://i.pinimg.com/originals/a1/d0/26/a1d0260071a61a1284d62e55c56c4d5a.jpg)]()
